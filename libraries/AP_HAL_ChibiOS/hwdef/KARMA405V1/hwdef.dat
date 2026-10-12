@@ -83,7 +83,7 @@ SPI_ORDER SPI1 SPI2 SPI3
 # ---------------- IMU ----------------
 # ICM42688P. Betaflight: sensor_align CW0FLIP + pitch 180 => ROTATION_PITCH_180
 # ??? check on the bench
-IMU Invensensev3 SPI:icm42688 ROTATION_PITCH_180
+IMU Invensensev3 SPI:icm42688 ROTATION_YAW_180
 
 # ---------------- I2C ----------------
 PB8 I2C1_SCL I2C1 PULLUP
