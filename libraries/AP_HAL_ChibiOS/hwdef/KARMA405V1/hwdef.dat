@@ -2,7 +2,7 @@
 # DRAFT. Items marked ??? need checking.
 
 MCU STM32F4xx STM32F405xx
-APJ_BOARD_ID 5001                 # ??? temporary id
+APJ_BOARD_ID AP_HW_KARMA405V1
 OSCILLATOR_HZ 8000000             # system_hse_mhz = 8
 FLASH_SIZE_KB 1024
 
