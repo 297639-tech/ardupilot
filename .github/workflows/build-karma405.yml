@@ -21,9 +21,7 @@ jobs:
         run: ls -l libraries/AP_HAL_ChibiOS/hwdef/KARMA405V1/
 
       - name: Build bootloader
-        run: |
-          ./waf configure --board KARMA405V1 --bootloader
-          ./waf bootloader
+        run: Tools/scripts/build_bootloaders.py KARMA405V1
 
       - name: Build Copter
         run: |
