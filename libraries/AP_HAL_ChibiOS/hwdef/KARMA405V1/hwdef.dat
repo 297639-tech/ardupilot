@@ -13,8 +13,18 @@ STORAGE_FLASH_PAGE 1
 # system tick on TIM5, because TIM2 is used by PB10 PWM output
 define STM32_ST_USE_TIMER 5
 
-# If firmware does not fit into 1MB flash, uncomment:
-# include ../include/minimize_fpv_osd.inc
+# F405 1MB: trim features to fit in flash
+include ../include/minimize_fpv_osd.inc
+
+define HAL_NAVEKF2_AVAILABLE 0
+define AP_SCRIPTING_ENABLED 0
+define HAL_MOUNT_ENABLED 0
+define HAL_PARACHUTE_ENABLED 0
+define HAL_SPRAYER_ENABLED 0
+define HAL_GENERATOR_ENABLED 0
+define HAL_ADSB_ENABLED 0
+define AP_OPTICALFLOW_ENABLED 0
+define HAL_GYROFFT_ENABLED 0
 
 # ---------------- USB / SWD ----------------
 # No VBUS sense (PA9 is used by motor 4)
