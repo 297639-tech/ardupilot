@@ -97,9 +97,9 @@ I2C_ORDER I2C1
 # Baro: BF status says DPS310. Extra candidates only for diagnostics.
 #BARO DPS310 I2C:0:0x76
 #BARO DPS310 I2C:0:0x77
-#BARO SPL06 I2C:0:0x76
+BARO SPL06 I2C:0:0x76
 #BARO SPL06 I2C:0:0x77
-BARO BMP280 I2C:0:0x76
+#BARO BMP280 I2C:0:0x76
 #BARO BMP280 I2C:0:0x77
 
 # ---------------- OSD ----------------
