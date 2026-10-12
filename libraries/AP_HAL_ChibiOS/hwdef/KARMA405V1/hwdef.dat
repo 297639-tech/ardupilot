@@ -12,6 +12,7 @@ define HAL_STORAGE_SIZE 15360
 STORAGE_FLASH_PAGE 1
 # system tick on TIM5, because TIM2 is used by PB10 PWM output
 define STM32_ST_USE_TIMER 5
+define HAL_BARO_ALLOW_INIT_NO_BARO
 
 # F405 1MB: trim features to fit in flash
 include ../include/minimize_fpv_osd.inc
@@ -85,13 +86,21 @@ SPI_ORDER SPI1 SPI2 SPI3
 IMU Invensensev3 SPI:icm42688 ROTATION_PITCH_180
 
 # ---------------- I2C ----------------
-PB8 I2C1_SCL I2C1
-PB9 I2C1_SDA I2C1
+PB8 I2C1_SCL I2C1 PULLUP
+PB9 I2C1_SDA I2C1 PULLUP
 I2C_ORDER I2C1
 
+
 # Baro DPS310 on I2C1, address 0x76 or 0x77
+#BARO DPS310 I2C:0:0x76
+#BARO DPS310 I2C:0:0x77
+# Baro: BF status says DPS310. Extra candidates only for diagnostics.
 BARO DPS310 I2C:0:0x76
 BARO DPS310 I2C:0:0x77
+BARO SPL06 I2C:0:0x76
+BARO SPL06 I2C:0:0x77
+BARO BMP280 I2C:0:0x76
+BARO BMP280 I2C:0:0x77
 
 # ---------------- OSD ----------------
 define OSD_ENABLED 1
