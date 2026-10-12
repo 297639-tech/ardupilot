@@ -10,6 +10,8 @@ FLASH_SIZE_KB 1024
 FLASH_RESERVE_START_KB 64
 define HAL_STORAGE_SIZE 15360
 STORAGE_FLASH_PAGE 1
+# system tick on TIM5, because TIM2 is used by PB10 PWM output
+define STM32_ST_USE_TIMER 5
 
 # If firmware does not fit into 1MB flash, uncomment:
 # include ../include/minimize_fpv_osd.inc
