@@ -102,7 +102,7 @@ BARO SPL06 I2C:0:0x76
 
 # ---------------- OSD ----------------
 define OSD_ENABLED 1
-define HAL_OSD_TYPE_DEFAULT 1     # MAX7456
+#define HAL_OSD_TYPE_DEFAULT 1     # MAX7456
 
 # ---------------- Outputs ----------------
 # Betaflight order: MOTOR1=PC8, MOTOR2=PC9, MOTOR3=PA8, MOTOR4=PA9
